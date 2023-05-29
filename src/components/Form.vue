@@ -50,7 +50,7 @@
         </div>
 
         <div class="form-children-wrapper">
-          <div class="form-children-item" v-for="(field, idx) in fields.slice(0, 5)">
+          <div class="form-children-item" v-for="(field, idx) in fields.slice(0, 5)" :key="field.key">
             <Field
                 v-slot="{ valid, meta, field }" :id="`name_${idx}`" :name="`childrens[${idx}].name`"
                 :key="field.key"
